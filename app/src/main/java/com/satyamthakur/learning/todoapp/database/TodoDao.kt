@@ -8,7 +8,7 @@ import androidx.room.Query
 @Dao
 interface TodoDao {
     @Query("SELECT * FROM todos ORDER BY ID DESC")
-    suspend fun getAllTodo(): LiveData<List<Todo>>
+    fun getAllTodo(): LiveData<List<Todo>>
 
     @Insert
     suspend fun insertTodo(todo: Todo): Long
